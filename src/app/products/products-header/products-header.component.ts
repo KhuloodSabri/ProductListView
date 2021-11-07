@@ -10,8 +10,7 @@ export class ProductsHeaderComponent {
   avgPrice = 0;
 
   @Input() set productsPrices(productsPrices: number[]) {
-    console.log("price changed...", productsPrices)
-
+    
     if (productsPrices.length == 0) {
       this.avgPrice = 0.0;
     }

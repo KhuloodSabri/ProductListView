@@ -1,15 +1,22 @@
 <app-products-header [productsPrices]="prices" (refresh)="getProducts()">
 </app-products-header>
 
-<div class="main-content">
-    <div class="row products-container" >
-        <ng-container *ngFor="let product of products; let i=index">
-            <div class="col-4 row" style="margin-bottom: 20px;">
-                <div class="col-1"></div>
-                <app-product-card class="col-10" style="min-height:100%;" [product]="product">
-                </app-product-card>
-                <div class="col-1"></div>
-            </div>
-        </ng-container>
-    </div>
-</div>
+<app-main-content>
+    <ng-container *ngIf="errorExistes">
+        <app-pop-up-message [error]="true">
+            An Error Occured!
+        </app-pop-up-message>
+    </ng-container>
+    <ng-container *ngIf="!errorExistes">
+        <div class="row products-container">
+            <ng-container *ngFor="let product of products; let i=index">
+                <div class="col-4 row card-container">
+                    <div class="col-1"></div>
+                    <app-product-card class="col-10" style="min-height:100%;" [product]="product">
+                    </app-product-card>
+                    <div class="col-1"></div>
+                </div>
+            </ng-container>
+        </div>
+    </ng-container>
+</app-main-content>

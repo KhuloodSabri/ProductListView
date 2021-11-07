@@ -1,0 +1,15 @@
+.header{
+    display: flex;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: rgba(75, 75, 255, 0.747);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: cursive;
+    font-size: 120%;
+    justify-content: space-between;
+    padding: 10px;
+}
