@@ -1,4 +1,5 @@
 <div class="row card">
+
   <div class="col-6 column">
     <div class="row" style="height:50%;">
       <img [src]="product.image" loading="lazy"/>
@@ -12,7 +13,7 @@
     </div>
 
     <div class="row" style="height:10%;border-top: 1px solid rgb(220 224 239);">
-      <div><span class="label">Price:</span> {{product.price}}</div>
+      <div><span class="label">Price:</span> {{product.price}}$</div>
     </div>
   </div>
 
@@ -20,4 +21,5 @@
     <div class="label" style="height: 20%;">{{product.name | uppercase}}</div>
     <div class="description" style="height: 70%;max-height: 70%; overflow: scroll;">{{product.description}}</div>
   </div>
+
 </div>

@@ -2,11 +2,13 @@
 </app-products-header>
 
 <app-main-content>
+
     <ng-container *ngIf="errorExistes">
         <app-pop-up-message [error]="true">
             An Error Occured!
         </app-pop-up-message>
     </ng-container>
+
     <ng-container *ngIf="!errorExistes">
         <div class="row products-container">
             <ng-container *ngFor="let product of products; let i=index">
@@ -19,4 +21,5 @@
             </ng-container>
         </div>
     </ng-container>
+
 </app-main-content>

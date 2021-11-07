@@ -10,19 +10,18 @@ export class ProductsHeaderComponent {
   avgPrice = 0;
 
   @Input() set productsPrices(productsPrices: number[]) {
-    
+
     if (productsPrices.length == 0) {
       this.avgPrice = 0.0;
+    } else {
+      let sum = 0.0;
+
+      productsPrices.forEach((price) => {
+        sum += price;
+      })
+
+      this.avgPrice = 1.0 * sum / productsPrices.length;
     }
-
-    let sum = 0.0;
-
-    productsPrices.forEach((price) => {
-      sum += price;
-    })
-
-    console.log(sum);
-    this.avgPrice = 1.0 * sum / productsPrices.length;
   };
 
   @Output() refresh = new EventEmitter<any>();

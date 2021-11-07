@@ -1,4 +1,4 @@
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 import { Observable } from 'rxjs';
@@ -14,7 +14,6 @@ export class ProductService {
 
 
   getProducts(): Observable<ApiResponse> {  
-    // 'products?_quantity=50'
     return this.apiService.get<ApiResponse>('products', new HttpParams().set('_quantity', 50));
   }
 }

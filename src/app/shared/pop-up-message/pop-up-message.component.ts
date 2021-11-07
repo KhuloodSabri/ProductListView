@@ -1,16 +1,13 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-pop-up-message',
   templateUrl: './pop-up-message.component.html',
   styleUrls: ['./pop-up-message.component.css']
 })
-export class PopUpMessageComponent implements OnInit {
+export class PopUpMessageComponent {
 
   bgColor = '';
-
-  constructor() { }
-
 
   @Input() 
   set error(error: boolean) {
@@ -20,8 +17,4 @@ export class PopUpMessageComponent implements OnInit {
       this.bgColor='green'
     }
   }
-
-  ngOnInit() {
-  }
-
 }
