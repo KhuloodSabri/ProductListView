@@ -1,0 +1,15 @@
+<app-products-header [productsPrices]="prices" (refresh)="getProducts()">
+</app-products-header>
+
+<div class="main-content">
+    <div class="row products-container" >
+        <ng-container *ngFor="let product of products; let i=index">
+            <div class="col-4 row" style="margin-bottom: 20px;">
+                <div class="col-1"></div>
+                <app-product-card class="col-10" style="min-height:100%;" [product]="product">
+                </app-product-card>
+                <div class="col-1"></div>
+            </div>
+        </ng-container>
+    </div>
+</div>

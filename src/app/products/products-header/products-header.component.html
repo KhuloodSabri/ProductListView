@@ -1,0 +1,8 @@
+<div class="header">
+  <h1>My Supermarket</h1>
+  Average price: {{avgPrice | number : '1.2-2'}}
+  <button type="button" class="btn btn-secondary" (click)="refresh.emit()">Refresh</button>
+  <div></div>
+</div>
+
+<div id="header-placeholder"></div>
